@@ -1,0 +1,46 @@
+.trending-interests {
+  width: 100%;
+  margin: 20px 0;
+
+  .interests {
+    display: flex;
+    justify-content: space-around;
+
+    .topics {
+      text-decoration: none;
+      color: black;
+      background-color: rgba(255, 255, 255, 0.6);
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+      padding: 8px 20px;
+      border-radius: 7px;
+      font-size: 14px;
+    }
+    .active {
+      background: rgba(0, 0, 0, 0.788);
+      color: white;
+    }
+
+    .see-more {
+      border-radius: 7px;
+      background-color: rgba(255, 255, 255, 0.6);
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 120px;
+        height: 32px;
+        border-radius: 7px;
+        background: linear-gradient(
+          to right,
+          rgba(245, 245, 245, 0.6) 10%,
+          rgba(245, 245, 245, 1) 90%
+        );
+        left: -125px;
+      }
+    }
+  }
+}
