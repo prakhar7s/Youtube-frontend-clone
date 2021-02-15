@@ -3,4 +3,10 @@
   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
   gap: 3rem 1rem;
   margin-top: 30px;
+  place-items: center;
+}
+@media screen and (max-width: 560px) {
+  .home-page-videos {
+    gap: 2rem 4rem;
+  }
 }

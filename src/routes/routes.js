@@ -6,7 +6,7 @@ import YoutubeHome from "../pages/youtube-home/youtube-home.page";
 const Routes = () => (
   <div>
     <Switch>
-      <Route path="/" exact component={YoutubeHome} />
+      <Route path="/Youtube-frontend-clone" exact component={YoutubeHome} />
     </Switch>
   </div>
 );

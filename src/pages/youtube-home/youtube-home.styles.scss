@@ -6,3 +6,9 @@
   grid-column-gap: 20px;
   padding: 15px;
 }
+
+@media screen and (max-width: 560px) {
+  .youtube-home {
+    grid-template-columns: 100%;
+  }
+}

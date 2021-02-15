@@ -48,3 +48,25 @@
     text-transform: uppercase;
   }
 }
+
+@media screen and (max-width: 560px) {
+  .youtube-ad {
+    .about-ad {
+      .upper {
+        img {
+          backdrop-filter: blur(1px);
+        }
+      }
+      .lower {
+        backdrop-filter: blur(4px);
+        font-size: 18px;
+      }
+    }
+
+    .one-month-free-btn {
+      padding: 7px 10px;
+      backdrop-filter: blur(10px);
+      color: rgb(0, 4, 255);
+    }
+  }
+}

@@ -16,7 +16,7 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 
 const Header = () => (
   <div className="header">
-    <div className="options">
+    <div className="options first-options-set">
       <Link className="option">
         <MenuIcon />
       </Link>
@@ -33,7 +33,7 @@ const Header = () => (
     <div className="search-field">
       <input type="text" name="search-text" placeholder="Search" />
     </div>
-    <div className="options">
+    <div className="options second-options-set">
       <Link className="option">
         <VideoCallIcon />
       </Link>

@@ -42,15 +42,53 @@
 
     input {
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.04);
+      background-color: rgba(0, 0, 0, 0.055);
       outline: none;
       border: 0;
       padding: 12px 18px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
       border-radius: 10px;
 
       &::placeholder {
         color: rgba(0, 0, 0, 0.4);
       }
+    }
+  }
+}
+@media screen and (max-width: 560px) {
+  .header {
+    height: 120px;
+    margin: 25px 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "search search"
+      "options-one options-two";
+    place-items: center;
+    .options {
+      .option {
+        width: 30px;
+        .MuiSvgIcon-root {
+          font-size: 19px;
+        }
+      }
+    }
+
+    .first-options-set {
+      grid-area: options-one;
+      width: 100%;
+    }
+
+    .search-field {
+      grid-area: search;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .second-options-set {
+      grid-area: options-two;
+      width: 100%;
     }
   }
 }

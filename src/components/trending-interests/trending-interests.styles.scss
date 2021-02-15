@@ -5,6 +5,7 @@
   .interests {
     display: flex;
     justify-content: space-around;
+    width: 100%;
 
     .topics {
       text-decoration: none;
@@ -40,6 +41,32 @@
           rgba(245, 245, 245, 1) 90%
         );
         left: -125px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .trending-interests {
+    max-width: 600px;
+    .interests {
+      overflow: scroll;
+      overflow-y: hidden;
+      padding: 30px 0;
+      padding-left: 460px;
+      padding-right: 200px;
+      width: 100%;
+      .topics {
+        width: fit-content;
+        margin: 0 7px;
+
+        &:nth-child(2) {
+          display: none;
+        }
+
+        &:last-child {
+          display: none;
+        }
       }
     }
   }
