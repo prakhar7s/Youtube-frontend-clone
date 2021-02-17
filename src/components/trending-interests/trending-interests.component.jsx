@@ -6,9 +6,10 @@ import "./trending-interests.styles.scss";
 
 // ICONS
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import { connect } from "react-redux";
 
-const TrendingInterests = () => (
-  <div className="trending-interests">
+const TrendingInterests = ({ darkTheme }) => (
+  <div className={`trending-interests${darkTheme ? " dark-mode" : ""}`}>
     <div className="interests">
       <Link className="topics active">All</Link>
       <Link className="topics">Stronghold Kingdoms</Link>
@@ -26,4 +27,9 @@ const TrendingInterests = () => (
     </div>
   </div>
 );
-export default TrendingInterests;
+
+const mapStateToProps = (state) => ({
+  darkTheme: state.themeReducer.darkTheme,
+});
+
+export default connect(mapStateToProps, null)(TrendingInterests);

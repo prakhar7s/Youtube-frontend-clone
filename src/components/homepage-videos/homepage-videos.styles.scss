@@ -1,12 +1,33 @@
-.home-page-videos {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  gap: 3rem 1rem;
-  margin-top: 30px;
-  place-items: center;
+.home-page-videos-container {
+  &.dark-mode {
+    background: black;
+    .heading {
+      color: white;
+    }
+  }
+
+  .heading {
+    font-size: 25px;
+    text-align: left;
+    width: 100%;
+    margin: 25px 0;
+    font-weight: 400;
+  }
+  .home-page-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 3rem 1rem;
+    margin-top: 30px;
+    place-items: center;
+  }
 }
 @media screen and (max-width: 560px) {
-  .home-page-videos {
-    gap: 2rem 4rem;
+  .home-page-videos-container {
+    .heading {
+      text-align: center;
+    }
+    .home-page-videos {
+      gap: 2rem 4rem;
+    }
   }
 }

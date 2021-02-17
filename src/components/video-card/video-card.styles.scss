@@ -5,6 +5,19 @@
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
   border-radius: 20px;
 
+  &.dark-mode {
+    background: #1a1919;
+
+    .title {
+      color: white;
+    }
+
+    .channel-name,
+    .lower span {
+      color: rgba(255, 255, 255, 0.342);
+    }
+  }
+
   .thumbnail {
     width: 100%;
     position: relative;
@@ -82,7 +95,7 @@
 
 @media screen and (max-width: 560px) {
   .video-card {
-    width: 290px;
+    width: 310px;
     padding: 22px 20px;
   }
 }

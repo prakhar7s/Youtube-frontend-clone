@@ -9,6 +9,37 @@
   padding: 0px 20px;
   justify-content: space-between;
 
+  &.dark-mode {
+    background: #1f1e1e;
+    .options {
+      .option {
+        background-color: rgba(71, 67, 67, 0.49);
+
+        .MuiSvgIcon-root {
+          color: white;
+        }
+      }
+
+      .active {
+        background: rgba(240, 95, 95, 0.1);
+        .MuiSvgIcon-root {
+          color: red;
+        }
+      }
+    }
+
+    .search-field {
+      input {
+        background: black;
+        color: white;
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.589);
+        }
+      }
+    }
+  }
+
   .options {
     width: 25%;
     display: flex;
@@ -26,6 +57,7 @@
 
       .MuiSvgIcon-root {
         color: rgba(0, 0, 0, 0.6);
+        font-size: 21px;
       }
     }
 

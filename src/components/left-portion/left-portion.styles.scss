@@ -1,0 +1,25 @@
+.left-portion {
+  overflow: scroll;
+  overflow-x: hidden;
+  padding-right: 10px;
+
+  &.dark-mode {
+    background: black;
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.733);
+      border-radius: 20px;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 7px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(27, 23, 23);
+    border-radius: 20px;
+  }
+}

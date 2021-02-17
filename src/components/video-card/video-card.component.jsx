@@ -5,6 +5,7 @@ import "./video-card.styles.scss";
 
 // ICONS
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import { connect } from "react-redux";
 
 const VideoCard = (props) => {
   const {
@@ -14,10 +15,11 @@ const VideoCard = (props) => {
     channelPicture,
     views,
     uploaded,
+    darkTheme,
   } = props;
 
   return (
-    <div className="video-card">
+    <div className={`video-card${darkTheme ? " dark-mode" : ""}`}>
       <div className="thumbnail">
         <img src={thumbnail} alt="thumbnail" />
         <div className="channel-pic">
@@ -38,4 +40,8 @@ const VideoCard = (props) => {
   );
 };
 
-export default VideoCard;
+const mapStateToProps = (state) => ({
+  darkTheme: state.themeReducer.darkTheme,
+});
+
+export default connect(mapStateToProps)(VideoCard);

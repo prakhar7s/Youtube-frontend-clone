@@ -2,6 +2,36 @@
   width: 100%;
   margin: 20px 0;
 
+  &.dark-mode {
+    .interests {
+      background: black;
+      .topics {
+        background-color: rgba(36, 34, 34, 0.68);
+        color: white;
+        box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.05);
+      }
+
+      .active {
+        background: white;
+        color: black;
+      }
+
+      .see-more {
+        background-color: rgba(36, 34, 34, 0.68);
+        color: white;
+        cursor: pointer;
+
+        &::before {
+          background: linear-gradient(
+            to right,
+            rgba(15, 15, 15, 0.12) 30%,
+            rgba(14, 11, 11, 0.99) 75%
+          );
+        }
+      }
+    }
+  }
+
   .interests {
     display: flex;
     justify-content: space-around;
@@ -48,14 +78,14 @@
 
 @media screen and (max-width: 560px) {
   .trending-interests {
-    max-width: 600px;
+    position: relative;
     .interests {
       overflow: scroll;
       overflow-y: hidden;
-      padding: 30px 0;
-      padding-left: 460px;
-      padding-right: 200px;
-      width: 100%;
+      padding: 30px 20px;
+      margin: auto;
+      padding-left: 415px;
+
       .topics {
         width: fit-content;
         margin: 0 7px;
@@ -67,6 +97,9 @@
         &:last-child {
           display: none;
         }
+      }
+      .see-more {
+        display: none;
       }
     }
   }
