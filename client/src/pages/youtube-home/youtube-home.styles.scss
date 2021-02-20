@@ -1,0 +1,28 @@
+.youtube-home {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 16.5% 83.46%;
+  background-color: #f5f5f5;
+  padding: 15px;
+  width: 100%;
+  padding-right: 0;
+  transition: 0.2s all;
+
+  &.hide-sidebar {
+    grid-template-columns: 0% 100%;
+  }
+
+  // darkmode
+  &.dark-mode {
+    background-color: #000;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .youtube-home {
+    grid-template-columns: 100%;
+    // position: fixed;
+    width: 100%;
+    height: fit-content;
+  }
+}
